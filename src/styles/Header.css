@@ -1,0 +1,72 @@
+@font-face{
+    font-family: "KaiseiDecol-Regular";
+    src: url("../../public/font/KaiseiDecol-Regular.ttf") format("truetype");
+}
+
+/*ｍｙｐａｇｅ 이외 헤더 */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #B8BAC6;
+    padding: 15px 25px;
+    font-family: "KaiseiDecol-Regular";
+}
+
+/*ｍｙｐａｇｅ 헤더 */
+.mypage-header {
+    background-color: #E7EFF5;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    padding: 15px 25px;
+    font-family: "KaiseiDecol-Regular";
+}
+
+/* ｍｙｐａｇｅ 이외 ＬＩＫＥＬＩＯＮ */
+.title {
+    font-size: 1rem;
+    font-family: "KaiseiDecol-Regular";
+    color: #FFFFFF;
+    padding-left: 30px;
+}
+
+/* 항목 스타일 */
+.item{
+    display: flex;
+    gap: 15px;
+    padding-right: 70px;
+}
+
+/* 항목 스타일 */
+.item a{
+    color: #FFFFFF;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+/* 항목을 눌렀을 때 */
+.item a.active {
+    color: #3A3A3A;
+}
+
+/* ｍｙｐａｇｅ에서 ＬＩＫＥＬＩＯＮ */
+.mypage-header .title{
+    color: #3A3A3A;
+}
+
+/* ｍｙｐａｇｅ에서 항목 */
+.mypage-header .item a{
+    color: #B8BAC6;
+}
+
+/* ｍｙｐａｇｅ에서 누른 항목（ｍｙｐａｇｅ */
+.mypage-header .item a.active {
+    color: #3A3A3A;
+}
