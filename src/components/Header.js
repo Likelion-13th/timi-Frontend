@@ -9,7 +9,9 @@ const Header = () => {
 
     return(
         <div className = {isMypage ? "mypage-header": "header"}>
-            <div className = "title">LIKELION</div>
+            <div className = "title">
+                <Link to ="/" className="home-link">LIKELION</Link>
+            </div>
             <div className = "item">
                 <Link to ="/new" className={currentPage=== "/new" ? "active" : ""}>New</Link>
                 <Link to= "/perfume" className={currentPage === "/perfume" ? "active" : ""}>Perfume</Link>

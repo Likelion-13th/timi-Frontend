@@ -66,7 +66,20 @@
     color: #B8BAC6;
 }
 
-/* ｍｙｐａｇｅ에서 누른 항목（ｍｙｐａｇｅ */
+/* ｍｙｐａｇｅ에서 누른 항목（ｍｙｐａｇｅ ) */
 .mypage-header .item a.active {
+    color: #3A3A3A;
+}
+
+/* LIKELION 홈 링크로 만들었을 때 */
+.home-link{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: "KaiseiDecol-Regular";
+}
+
+/* mypage에서 LIKELION 검정색으로 */
+.mypage-header .home-link {
     color: #3A3A3A;
 }
