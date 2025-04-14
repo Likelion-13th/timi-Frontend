@@ -1,0 +1,122 @@
+@font-face{
+    font-family: "KaiseiDecol-Regular";
+    src: url("../../public/font/KaiseiDecol-Regular.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: "NanumMyeongjo";
+    src: url("../../public/font/NanumMyeongjo-Regular.ttf") format("truetype");
+}
+
+.home-container{
+    width: 100%;
+}
+
+.menu-container{
+    display: flex;
+    width: 100%;
+    font-family: "KaiseiDecol-Regular";
+}
+
+.menu-section{
+    display: flex;
+    width: 50%;
+    position: relative;
+}
+
+.menu-section::before{
+    content: '';
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    border: 2px solid white;
+}
+
+.menu-perfume{
+    width: 100%;
+    display: block;
+}
+
+.text-overlay{
+    position: absolute;
+    color: white;
+    font-size: 48px;
+}
+
+.text-perfume {
+    left: 28px;
+    bottom: 28px;
+}
+
+.text-diffuser{
+    right: 28px;
+    bottom: 28px;
+}
+
+.banner-container{
+    width: 100%;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: white;
+}
+
+.info-section_1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 200px;
+    padding: 50px;
+}
+
+.info-image {
+    width: 60%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 200px;
+    z-index: 1;
+}
+
+.info-background {
+    position: absolute;
+    width: 48%;
+    border-radius: 5px;
+    margin-bottom: 70px;
+    margin-left: 150px;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.info-label {
+    writing-mode: vertical-rl;
+    font-size: 30px;
+    margin-top: 115px;
+    margin-right: 100px;
+    color: black;
+    font-family: "KaiseiDecol-Regular";
+}
+
+.info-section_2 {
+    width: 100%;
+    font-weight: bold;
+    padding: 30px;  
+}
+
+.info-title {
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-family: "NanumMyeongjo";
+    color: black;
+}
+
+.info-contents {
+    font-size: 14px;
+    color: black;
+    font-family: "NanumMyeongjo";
+}

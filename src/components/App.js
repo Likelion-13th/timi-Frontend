@@ -1,16 +1,17 @@
-import './App.css';
+import '../App.css';
 
 import React from "react";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 //푸터도 임포트
-import Footer from"./components/Footer";
-import Header from"./components/Header";
-import Home from "./pages/Home/Home";
-import Mypage from "./pages/Mypages/Mypage";
-import Diffuser from "./pages/ProductPage/Diffuser";
-import Perfume from "./pages/ProductPage/Perfume";
-import New from "./pages/ProductPage/New";
+import Footer from"./Footer";
+import Header from"./Header";
+import ToolBar from "./ToolBar";
+import Home from "../pages/Home/Home";
+import Mypage from "../pages/Mypages/Mypage";
+import Diffuser from "../pages/ProductPage/Diffuser";
+import Perfume from "../pages/ProductPage/Perfume";
+import New from "../pages/ProductPage/New";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       </Routes>
       <Footer />
       <Header />
+      <ToolBar />
     </Router>
    
   );
