@@ -184,7 +184,7 @@ const Perfume=() => {
                     prev
                 </button>
             )}
-            {Array.from({ length: totalPages }, (_, i) => i + 1 ). map(
+            {Array.from({ length: totalPages }, (_, i) => i + 1 ).map(
                 (pageNumber) => (
                     <button
                     key={pageNumber}

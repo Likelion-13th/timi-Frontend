@@ -8,7 +8,8 @@ const ProductCard = ({product, onClick}) => {
             <img
             src={product.imagePath}
             alt={product.name}
-            className="product-image"/>
+            className="product-image"
+            />
         <div className= "product-name">{product.name}</div>
         <div className= "product-brand">{product.brand}</div>
         <div className= "product-price">{product.price.toLocaleString()}원</div>
