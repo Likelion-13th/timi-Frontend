@@ -81,7 +81,7 @@ const New=() => {
                 <Banner title="New" imagePath={"/banner_new.png"} />
                 <div className="product-container">
                     <div className="product-grid">
-                        {products.map((product)=>(
+                        {currentProducts.map((product)=>(
                             <ProductCard
                             key={product.id}
                             product={product}
@@ -96,7 +96,7 @@ const New=() => {
             </div>
             <div className="paging">
             {currentPage > 1 && (
-                <button>
+                <button onClick ={()=> handlePageChange(currentPage - 1)} >
                     prev
                 </button>
             )}
@@ -104,13 +104,15 @@ const New=() => {
                 (pageNumber) => (
                     <button
                     key={pageNumber}
+                    onClick={()=> handlePageChange(pageNumber)}
+                    className={currentPage === pageNumber ? "active" : ""}
                     >
                         {pageNumber}
                     </button>
                 )
             )}
             {currentPage < totalPages && (
-                <button>
+                <button onClick ={()=> handlePageChange(currentPage + 1)}>
                     Next
                 </button>
             )}
