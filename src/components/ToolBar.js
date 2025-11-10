@@ -39,8 +39,8 @@ const ToolBar = ({isLogin, onLoginChange }) => {
         <div className= "toolbar-container">
             <img
                 src={isLogin 
-                    ? `${process.env.PUBLIC_URL}/icon/icon_login.svg` 
-                    : `${process.env.PUBLIC_URL}/icon/icon_logout.svg` 
+                    ? `${process.env.PUBLIC_URL}/icon/icon_logout.svg` 
+                    : `${process.env.PUBLIC_URL}/icon/icon_login.svg` 
                 }
                 alt="login"
                 className="toolbar-icon"
