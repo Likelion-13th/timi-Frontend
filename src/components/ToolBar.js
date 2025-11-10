@@ -3,6 +3,15 @@ import "../styles/ToolBar.css";
 import axios from 'axios';
 import { useCookies } from "react-cookie";
 
+const MoveToTop =() => {
+    window.scrollTo({ top: 0, behavior: "smooth"});
+};
+
+const MoveToBottom = () => {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth"});
+};
+
+
 const handleLoginRedirect = () => {
     const redirectUrl = 
         process.env.NODE_ENV === "development"
@@ -19,7 +28,7 @@ const handleLoginRedirect = () => {
 
 const ToolBar = ({isLogin, onLoginChange }) => {
 
-    const [cookies,] = useCookies(["accessToken"]);
+    const [cookies, removeCookie] = useCookies(["accessToken"]);
 
     const handleLogout = () => {
         axios.delete("/users/logout", {
@@ -28,7 +37,10 @@ const ToolBar = ({isLogin, onLoginChange }) => {
                 Authorization: `Bearer ${cookies.accessToken}`,
             },
         })
-        .then(() => {})
+        .then(() => {
+            onLoginChange(false);
+            removeCookie("accessToken", {path: "/"});
+        })
         .catch((err) => {
             console.log("LOGOUT API 요청 실패", err);
         });
@@ -65,14 +77,6 @@ const ToolBar = ({isLogin, onLoginChange }) => {
             ></img>
         </div>
     );
-};
-
-const MoveToTop =() => {
-    window.scrollTo({ top: 0, behavior: "smooth"});
-};
-
-const MoveToBottom = () => {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth"});
 };
 
 export default ToolBar;
