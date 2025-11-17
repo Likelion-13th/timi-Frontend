@@ -46,6 +46,10 @@ const Mypage=() => {
 
     // 사용자 정보 조회 API
     useEffect(() => {
+        if(!cookies.accessToken) {
+            return;
+        }
+
         axios.get("/users/profile", {
             headers: {
                 accept: "*/*",
@@ -67,6 +71,10 @@ const Mypage=() => {
 
     // 모든 주문 조회 API
     useEffect(() => {
+        if(!cookies.accessToken) {
+            return;
+        }
+        
         axios.get("/orders", {
             headers: {
                 accept: "*/*",
