@@ -1,11 +1,14 @@
 import React from 'react';
-const History=() => {
-    const onCancel = () => {
-        //API 호출
-        alert("취소");
-    }
 
-    const image = `${process.env.PUBLIC_URL}/img/History_image.jpg`;
+const History=({historyData = [], onCancel}) => {
+    const formatCurrency = (amount) => {
+        return new Intl.NumberFormat('ko-KR').format(amount);
+    };
+
+    const formatDate = (isoString) => {
+        if(!isoString) return "";
+        return isoString.slice(0, 10);
+    };
         return(
             <div className="history-container-wrap">
                 <div className="history-title">나의 쇼핑 내역</div>
@@ -22,35 +25,33 @@ const History=() => {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>2025-01-01</td>
-                                <td>
-                                    <div className="history-section">
-                                        <div className="history-section-left">
-                                            <img src={image} alt="product" className= "history-image"/>
-                                        </div>
-                                        <div className="history-section-right">
-                                            <div className="history-stat-label1">
-                                                센트오브티 퍼퓸 디퓨저      
+                            {historyData.length === 0 ? (
+                                <tr>
+                                    <td colSpan="6" style={{ textAlign: "center"}}>
+                                        주문내역이 없습니다.
+                                    </td>
+                                </tr>
+                            ): (
+                                historyData.map((order) => (
+                                    <tr key = {order.orderId}>
+                                        <td>{formatDate(order.createdAt)}</td>
+                                        <td>{order.itemName}</td>
+                                        <td>{formatCurrency(order.quantity)}</td>
+                                        <td>{formatCurrency(order.finalPrice)}</td>
+                                        <td>{order.status}</td>
+                                        <td>
+                                            <div className="history-cancel">
+                                                <div 
+                                                    className="history-cancel-button"
+                                                    onClick={() => onCancel(order.orderId)}
+                                                >
+                                                    취소
+                                                </div>
                                             </div>
-                                            <div className="history-stat-label2">
-                                                KUNDAL
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>1</td>
-                                <td>135,000</td>
-                                <td>배송중</td>
-                                <td>
-                                    <div className="history-cancel">
-                                        <div 
-                                        className="history-cancel-button"
-                                        onClick={onCancel}
-                                    >취소</div>
-                                    </div>
-                                </td>
-                            </tr>
+                                        </td>
+                                    </tr>
+                                ))
+                            )}
                         </tbody>
                     </table>
                 </div>

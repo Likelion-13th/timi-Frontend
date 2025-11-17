@@ -16,7 +16,12 @@
     font-size: 22px;
     font-family: "KaiseiDecol-Regular";
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0.25);
+    background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.4)
+  );
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   }
   
   header[data-page="mypage"] {
@@ -25,7 +30,7 @@
   
   .logo a {
     text-decoration: none;
-    color: #ffffff;
+    color: #f5f2e9;
     font-size: 22px;
   }
   
@@ -50,7 +55,7 @@
   .nav-menu a:hover,
   .nav-menu a:focus,
   .nav-menu a.active {
-    color: #3a3a3a;
+    color: #d3b37a;
   }
   
   header[data-page="mypage"] .nav-menu a:hover,

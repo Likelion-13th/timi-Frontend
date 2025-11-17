@@ -2,7 +2,7 @@ import React from "react";
 import './../../styles/Home.css';
 
 const Info = () => {
-    const image = `${process.env.PUBLIC_URL}/img/Info_image.jpg`;  
+    const image = `${process.env.PUBLIC_URL}/img/Home_Info.jpg`;  
     
     return(
     
@@ -13,18 +13,21 @@ const Info = () => {
             <div className = "info-label">ABOUT US</div>
         </div>
         <div className = "info-section_2">
-            <h1 className= "info-title">자연과의 공존,<br/>지속 가능한 아름다움을 향하여</h1>
+            <h1 className= "info-title">시간을 기록하는 도구,<br/>일상을 채우는 빈티지한 감성</h1>
             <br />
             <p className= "info-contents">
-                '멋쟁이사자처럼'의 향수와 디퓨저는<br />
-                자연에서 영감을 받아 엄선된 원료만을 사용해 만들어졌습니다.<br />
+                'CASIO VINTAGE'와 'CASIO ANALOG'는 <br />
+                지금 이 순간의 나를 가장 자연스럽게 보여주는 시계입니다.<br />
                 <br />
-                환경을 지키기 위한 노력으로 지속 가능한 제조 공정을 채택하며,<br />
-                재활용 가능한 친환경 패키지를 사용합니다.<br />
+                레트로한 디지털 감성을 담은 VINTAGE 라인은,<br />
+                메탈 브레이슬릿과 클래식한 화면 구성으로<br />
+                어제의 추억과 오늘의 일상을 동시에 비춥니다.<br />
                 <br />
-                단순한 향기가 아닌, 지구를 위한 작은 실천과 아름다움을 담았습니다.<br />
+                침의 움직임 하나까지 담아낸 ANALOG 라인은,<br />
+                깔끔한 다이얼과 안정감 있는 컬러로<br />
+                어느 상황에서나 자연스럽게 어울립니다. <br />
                 <br />
-                지금, 자연과 함께하는 향기를 경험해보세요.
+                지금, 당신의 시간을 담을 VINTAGE & ANALOG 컬렉션을 만나보세요.
             </p>
         </div>
     </div>

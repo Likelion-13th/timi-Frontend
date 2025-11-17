@@ -1,60 +1,24 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Banner from "./Banner";
 import ProductCard from "./ProductCard";
 import "../../styles/ProductPage.css";
 import PayModal from "./../../components/PayModal";
-
+import axios from "axios";
+import { useCookies } from 'react-cookie';
 
 const Diffuser=() => {
-    const products = [
-        {
-            id:1,
-            name: "벚꽃 디퓨저",
-            brand: "코코도르",
-            price: 40000,
-            imagePath: "/img/diffuser_img/diffuser_1.png",
-            isNew: false,
-        },
-        {
-            id:2,
-            name: "미스티블루 디퓨저",
-            brand: "코코도르",
-            price: 30000,
-            imagePath: "/img/diffuser_img/diffuser_2.png",
-            isNew: true,
-        },
-        {
-            id:3,
-            name: "모먼트 디퓨저",
-            brand: "코코도르",
-            price: 30000,
-            imagePath: "/img/diffuser_img/diffuser_3.png",
-            isNew: false,
-        },
-        {
-            id:4,
-            name: "멀티클래식 디퓨저",
-            brand: "코코도르",
-            price: 43400,
-            imagePath: "/img/diffuser_img/diffuser_4.png",
-            isNew: false,
-        },
-        {
-            id:5,
-            name: "포레스트 디퓨저",
-            brand: "코코도르",
-            price: 23500,
-            imagePath: "/img/diffuser_img/diffuser_5.png",
-            isNew: true,
-        },
 
-    ];
-
+    const [products, setProducts] = useState([]);
     const [selectedProduct, setSelectedProduct] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
     
     const handleCardClick = (product) => {
         setSelectedProduct(product);
+        // accessToken type이 string이 아니면 = 쿠키가 없으면
+        if(typeof cookies.accessToken !== "string") {
+            alert("로그인이 필요합니다.")
+            return;
+        }
         setIsModalOpen(true);
     };
     
@@ -62,6 +26,8 @@ const Diffuser=() => {
         setSelectedProduct(null);
         setIsModalOpen(false);
     };
+    
+    const [cookies] = useCookies(['accessToken']);
 
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 5; // 페이지당 5개 상품 표시
@@ -75,10 +41,27 @@ const Diffuser=() => {
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
+
+
+    useEffect(() => {
+        axios.get("/categories/2/items", {
+            headers: {
+                accept: "*/*",
+            },
+        })
+        .then((response) => {
+            setProducts(response.data.result);
+        })
+        .catch((err) => {
+            console.log("CATEGORY API 요청 실패", err);
+        });
+
+    },[]);
+
         return(
         <div>
             <div>
-                <Banner title="Diffuser" imagePath={"/banner_diffuser.jpg"} />
+                <Banner title="ANALOG" imagePath={"/Banner_Analog.jpg"} />
                 <div className="product-container">
                     <div className="product-grid">
                         {currentProducts.map((product)=>(

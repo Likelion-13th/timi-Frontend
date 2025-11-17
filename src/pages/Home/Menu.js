@@ -5,19 +5,19 @@ const Menu=() => {
         <div className="menu-container">
             <Link to="/perfume" className="menu-section">
                 <img 
-                src={`${process.env.PUBLIC_URL}/img/banner_perfume.jpg`}
+                src={`${process.env.PUBLIC_URL}/img/Banner_Vintage.jpg`}
                 alt="perfume"
                 className="menu-perfume"
                 ></img>
-                <div className="text-overlay text-perfume">Perfume</div>    
+                <div className="text-overlay text-perfume">VINTAGE</div>    
             </Link>
             <Link to="/diffuser" className="menu-section">
                 <img 
-                src={`${process.env.PUBLIC_URL}/img/banner_diffuser.jpg`}
+                src={`${process.env.PUBLIC_URL}/img/Banner_Analog.jpg`}
                 alt="perfume"
                 className="menu-perfume"
                 ></img>
-                <div className="text-overlay text-diffuser">Diffuser</div>    
+                <div className="text-overlay text-diffuser">ANALOG</div>    
             </Link>
         </div>
     );

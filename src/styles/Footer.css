@@ -17,17 +17,19 @@
 .footer-title {
     font-size: 1.2rem;
     font-family: "KaiseiDecol-Regular";
+    color: whitesmoke;
 }
 
 .footer-subtitle{
     font-family:"NanumMyeongjo";
+    color: whitesmoke;
 }
 
 .footer-container{
     display: flex;
     flex-direction: column;
     gap: 36px;
-    background-color: #E7EFF5;
+    background-color:#343434;
     padding: 52px 72px;
 }
 
@@ -44,9 +46,9 @@
 }
 
 .info-text-1{
-    color: #B8BAC6;
+    color: whitesmoke;
 }
 
 .info-text-2{
-    color: #9698A4;
+    color: whitesmoke;
 }

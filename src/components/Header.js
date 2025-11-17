@@ -14,25 +14,25 @@ const Header = () => {
       </div>
       <nav className="nav-menu">
         <Link to="/new" className={currentPage === "/new" ? "active" : ""}>
-          New
+          NEW
         </Link>
         <Link
           to="/perfume"
           className={currentPage === "/perfume" ? "active" : ""}
         >
-          Perfume
+          VINTAGE
         </Link>
         <Link
           to="/diffuser"
           className={currentPage === "/diffuser" ? "active" : ""}
         >
-          Diffuser
+          ANALOG
         </Link>
         <Link
           to="/mypage"
           className={currentPage === "/mypage" ? "active" : ""}
         >
-          Mypage
+          MYPAGE
         </Link>
       </nav>
     </header>

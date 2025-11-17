@@ -41,7 +41,17 @@
 
 .text-overlay{
     position: absolute;
-    color: white;
+    background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #f0f0f0 20%,
+        #c9c9c9 45%,
+        #7a7a7a 70%,
+        #9b9b9b 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     font-size: 48px;
 }
 
@@ -87,7 +97,7 @@
     position: absolute;
     width: 48%;
     border-radius: 5px;
-    margin-bottom: 70px;
+    margin-bottom: 90px;
     margin-left: 150px;
     z-index: 0;
     opacity: 0.3;
@@ -95,15 +105,15 @@
 
 .info-label {
     writing-mode: vertical-rl;
-    font-size: 30px;
-    margin-top: 115px;
+    font-size: 40px;
+    margin-top: 180px;
     margin-right: 100px;
     color: black;
     font-family: "KaiseiDecol-Regular";
 }
 
 .info-section_2 {
-    width: 100%;
+    width: 200%;
     font-weight: bold;
     padding: 30px;  
 }
@@ -112,11 +122,25 @@
     font-size: 35px;
     margin-bottom: 20px;
     font-family: "NanumMyeongjo";
-    color: black;
+    background: linear-gradient(
+        180deg,
+        #7a7a7a 0%,
+        #464646 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .info-contents {
-    font-size: 14px;
-    color: black;
+    font-size: 16px;
     font-family: "NanumMyeongjo";
+    background: linear-gradient(
+        180deg,
+        #7a7a7a 0%,
+        #464646 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
