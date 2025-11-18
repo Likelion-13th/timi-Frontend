@@ -5,4 +5,4 @@
 /categories/*  http://Sajang-dev-env.eba-vnmycbab.ap-northeast-2.elasticbeanstalk.com/categories/:splat  200!
 /reissue       http://Sajang-dev-env.eba-vnmycbab.ap-northeast-2.elasticbeanstalk.com/reissue            200!
 
-/*             /index.html  200!
+/*             /index.html  200
